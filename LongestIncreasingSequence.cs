@@ -10,7 +10,14 @@ namespace LongestIncrSequence
     {
         static void Main(string[] args)
         {
-       
+            /*
+       Write a program to find all increasing sequences inside an array of integers. 
+       The integers are given on a single line, separated by a space. Print the sequences
+       in the order of their appearance in the input array, each at a single line. Separate 
+       the sequence elements by a space. Find also the longest increasing sequence and print 
+       it at the last line. If several sequences have the same longest length, print the left-most of them. 
+
+    */
             List<int> digits = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
             int count = 1;
             int maxLength = 1;
