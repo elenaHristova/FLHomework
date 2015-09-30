@@ -48,11 +48,6 @@ namespace LongestIncrSequence
             {
                 Console.Write(digits[j]+ " ");
             }
-<<<<<<< HEAD
-            //conflicting message cloning 2
-=======
-            //Conflicting message in cloning 1
->>>>>>> 35c08c471e8a965a56ad29d8edb8f693f4a1b4d2
         }
     }
 }
