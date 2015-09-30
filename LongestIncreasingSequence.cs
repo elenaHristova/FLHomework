@@ -28,7 +28,6 @@ namespace LongestIncrSequence
                 {
                     count++;
                     Console.Write(digits[i] + " ");
-                    //Console.Write(String.Join(" ", digits));
                 }
                 else
                 {
