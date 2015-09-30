@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class SortedSubsetSums //KatyaMarincheva
+class SortedSubsetSums
 {
     static List<List<int>> subsets = new List<List<int>>();
     static int[] numbs;
@@ -19,7 +19,7 @@ class SortedSubsetSums //KatyaMarincheva
         n = int.Parse(Console.ReadLine());
         numbs = Console.ReadLine().Split(' ').Select(int.Parse).Distinct().ToArray();
         Array.Sort(numbs);
-        //numbers = new int[] { 1, 2, 3, 4 };
+       
         List<int> subset = new List<int>();
         MakeSubset(0, subset);
         var sorted = subsets.OrderBy(x => x.Count);
@@ -38,7 +38,6 @@ class SortedSubsetSums //KatyaMarincheva
             subsets.Add(new List<int>(subset));
             solution = true; // set solution to true, and we will not be printing that there is no solution
         }
-        //Console.WriteLine(string.Join(" ", subset));
         for (int i = index; i < numbs.Length; i++)
         {
             subset.Add(numbs[i]);
@@ -46,28 +45,4 @@ class SortedSubsetSums //KatyaMarincheva
             subset.RemoveAt(subset.Count - 1); // remove last element
         }
     }
-}/*using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SubsetSum
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int n = int.Parse(Console.ReadLine());
-            string input = Console.ReadLine();
-            string [] numbs = input.Split(' ');
-            int[] numbers = new int[numbs.Length];
-            for (int i = 0; i <numbs.Length; i++)
-            {
-                numbers[i] = Convert.ToInt32(numbs[i]);
-            }
-           //Console.WriteLine(String.Join(" ",numbers));
-
-        }
-    }
-} */
+}
